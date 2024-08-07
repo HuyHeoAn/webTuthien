@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById('register-status').innerText = 'Username already registered.';
             return;
         }
-
+        
         users.push({ username: username, password: password });
         localStorage.setItem('users', JSON.stringify(users));
         
