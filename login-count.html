@@ -153,7 +153,7 @@
     <script>
      document.addEventListener("DOMContentLoaded", function() {
     // Nếu localStorage chưa có dữ liệu, khởi tạo với dữ liệu đã cho
-    if (!localStorage.getItem('users')) {
+    if (!localStorage.getItem('users1')) {
         const initialUsers = [
             { username: 'huypro@gmail.com', password: '123456' },
             { username: 'congtinh@gmail.com', password: 'password1' },
@@ -241,7 +241,7 @@
             { username: 'ngoclan@gmail.com', password: '123456' },
             { username: 'viettan@gmail.com', password: '123456' }
         ];
-        localStorage.setItem('users', JSON.stringify(initialUsers));
+        localStorage.setItem('users1', JSON.stringify(initialUsers));
         localStorage.setItem('loginCount', initialUsers.length);
     }
 
@@ -269,7 +269,7 @@
             deleteButton.classList.add('btn', 'btn-danger', 'btn-sm');
             deleteButton.onclick = function() {
                 users.splice(index, 1);
-                localStorage.setItem('users', JSON.stringify(users));
+                localStorage.setItem('users1', JSON.stringify(users));
 
                 // Cập nhật số lượng đăng nhập
                 loginCount -= 1;
@@ -333,7 +333,7 @@
             deleteButton.onclick = function() {
                 let userIndex = users.indexOf(user);
                 users.splice(userIndex, 1);
-                localStorage.setItem('users', JSON.stringify(users));
+                localStorage.setItem('users1', JSON.stringify(users));
 
                 // Cập nhật số lượng đăng nhập
                 loginCount -= 1;
