@@ -250,7 +250,7 @@
     document.getElementById('login-count').innerText = loginCount;
 
     // Hiển thị danh sách người dùng
-    let users = JSON.parse(localStorage.getItem('users'));
+    let users = JSON.parse(localStorage.getItem('users1'));
     let accountList = document.getElementById('account-list');
 
     function updateUserList() {
@@ -295,7 +295,7 @@
         let password = document.getElementById('password').value;
         if (username && password) {
             users.push({ username, password });
-            localStorage.setItem('users', JSON.stringify(users));
+            localStorage.setItem('users1', JSON.stringify(users));
 
             // Tăng số lượng đăng nhập
             loginCount += 1;
