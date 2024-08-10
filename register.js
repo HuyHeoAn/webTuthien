@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
-        let users = JSON.parse(localStorage.getItem('users')) || [];
+        let users = JSON.parse(localStorage.getItem('users1')) || [];
         
         // Check if user already exists
         if (users.some(user => user.username === username)) {
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         
         users.push({ username: username, password: password });
-        localStorage.setItem('users', JSON.stringify(users));
+        localStorage.setItem('users1', JSON.stringify(users));
         
         console.log("Registration successful!");
         window.location.href = 'dangnhap.html'; // Redirect to login page
