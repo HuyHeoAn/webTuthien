@@ -87,7 +87,7 @@
             let email = document.getElementById("email").value;
             let password = document.getElementById("password").value;
 
-            let users = JSON.parse(localStorage.getItem('users1')) || [];
+            let users = JSON.parse(localStorage.getItem('users2')) || [];
             let user = users.find(user => user.username === email && user.password === password);
 
             if (user) {
